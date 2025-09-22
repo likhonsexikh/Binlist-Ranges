@@ -1,21 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A tool to check and enrich Bank Identification Numbers (BINs) from multiple sources.">
-    <meta name="keywords" content="BIN, IIN, bank, checker, binlist">
-    <title>BIN Checker</title>
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="BIN Checker" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="A tool to check and enrich Bank Identification Numbers (BINs) from multiple sources." />
-    <meta property="og:url" content="https://your-deployment-url.vercel.app/" />
-    <meta property="og:image" content="https://placehold.co/1200x630/343a40/ffffff/png?text=BIN%2FIIN%0AData%20Explorer" />
-    <meta property="og:image:alt" content="A title card for the BIN/IIN Data Explorer application." />
-    <meta property="og:site_name" content="BIN Checker" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8">
+  <title>Binlist Ranges Scanner</title>
+  <meta name="description" content="Scan and enrich BIN/IIN ranges with country, bank, and prepaid details. Mobile-friendly and powered by Binlist.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Binlist Ranges Scanner" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://binlist-ranges.vercel.app/" />
+  <meta property="og:image" content="https://binlist-ranges.vercel.app/static/preview.png" />
+  <meta property="og:description" content="Fetches BIN ranges from multiple sources, dedupes, and enriches via Binlist API." />
+  <meta property="og:site_name" content="Binlist Ranges" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@likhonsheikh">
+  <meta name="twitter:title" content="Binlist Ranges Scanner">
+  <meta name="twitter:description" content="Enriched BIN/IIN database with live lookup support.">
+  <meta name="twitter:image" content="https://binlist-ranges.vercel.app/static/preview.png">
+
+  <link rel="icon" href="/static/favicon.ico">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="container">
@@ -51,13 +56,12 @@
     </div>
 
     <footer>
-        <p>
-            Powered by <a href="https://t.me/likhonsheikh" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-telegram"></i> Likhon Sheikh
-            </a>
-        </p>
+      <p>Powered by <a href="https://t.me/likhonsheikh" target="_blank">
+        <i class="fab fa-telegram"></i> @likhonsheikh</a></p>
     </footer>
 
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

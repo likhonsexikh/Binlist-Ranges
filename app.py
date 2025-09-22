@@ -25,10 +25,6 @@ if not os.path.exists(os.path.join('data', 'bins.json')):
     scan_thread.start()
 
 # --- Routes ---
-@app.route('/')
-def index():
-    return render_template('index.html')
-
 @app.route('/api/bins')
 def get_bins():
     data_path = os.path.join('data', 'bins.json')

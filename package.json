@@ -1,0 +1,20 @@
+{
+  "name": "binlist-checker-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@geist-ui/core": "^2.3.8",
+    "axios": "^1.6.8",
+    "binlookup": "^1.0.0",
+    "csv-parse": "^5.5.5",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18"
+  }
+}

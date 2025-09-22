@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A tool to check and enrich Bank Identification Numbers (BINs) from multiple sources.">
+    <meta name="keywords" content="BIN, IIN, bank, checker, binlist">
+    <title>BIN Checker</title>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="BIN Checker" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="A tool to check and enrich Bank Identification Numbers (BINs) from multiple sources." />
+    <meta property="og:url" content="https://your-deployment-url.vercel.app/" />
+    <meta property="og:image" content="https://placehold.co/1200x630/343a40/ffffff/png?text=BIN%2FIIN%0AData%20Explorer" />
+    <meta property="og:image:alt" content="A title card for the BIN/IIN Data Explorer application." />
+    <meta property="og:site_name" content="BIN Checker" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>BIN/IIN Data Explorer</h1>
+        <p class="subtitle">Scans multiple sources to provide enriched BIN data.</p>
+
+        <div id="loading-indicator">
+            <p>Loading BIN data... The initial scan can take a few minutes. Please be patient.</p>
+        </div>
+
+        <div id="error-message" style="display: none;">
+            <p>Could not load BIN data. The scan may still be running or it might have failed. Please try refreshing the page in a few moments.</p>
+        </div>
+
+        <div class="table-container">
+            <table id="bins-table">
+                <thead>
+                    <tr>
+                        <th>BIN</th>
+                        <th>Scheme</th>
+                        <th>Type</th>
+                        <th>Brand</th>
+                        <th>Prepaid</th>
+                        <th>Country</th>
+                        <th>Bank</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            Powered by <a href="https://t.me/likhonsheikh" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-telegram"></i> Likhon Sheikh
+            </a>
+        </p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,6 +1,0 @@
-flask
-gunicorn
-requests
-pandas
-ratelimit
-backoff
